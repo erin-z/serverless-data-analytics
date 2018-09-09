@@ -22,13 +22,13 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 2. If this is your first time visiting the AWS Management Console for Athena, you will get a Getting Started page. Choose **Get Started** to open the Query Editor. If this isn't your first time, the Athena **Query Editor** opens.
 3. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
 4. In the Athena **Query Editor**, you will see a query pane with an example query. Now you can start entering your query in the query pane.
-5. To create a database named *username*, copy the following statement, and then choose **Run Query**:
+5. To create a database named *userXX*, e.g user1, copy the following statement, and then choose **Run Query**:
 
 ````sql
     CREATE DATABASE user1
 ````
 
-6.	Ensure *username* appears in the DATABASE list on the **Catalog** dashboard
+6.	Ensure *userXX* appears in the DATABASE list on the **Catalog** dashboard
 
 ![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
 
@@ -43,7 +43,7 @@ Now that you have a database, you are ready to create a table that is based on t
 >-	Athena does not support different storage classes within the bucket specified by the LOCATION clause, does not support the GLACIER storage class, and does not support Requester Pays buckets. For more information, see [Storage Classes](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html),[Changing the Storage Class of an Object in Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/ChgStoClsOfObj.html), and [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
 
 1. Ensure that current AWS region is **US West (Oregon)** region
-2. Ensure **mydatabase** is selected from the **DATABASE** list and then choose **New Query**.
+2. Ensure **userXX** is selected from the **DATABASE** list and then choose **New Query**.
 3. In the query pane, copy the following statement to create TaxiDataYellow table, and then choose **Run Query**:
 
 ````sql
@@ -131,7 +131,7 @@ By partitioning your data, you can restrict the amount of data scanned by each q
 
 1. Ensure that current AWS region is **US West (Oregon)** region
 
-2. Ensure **mydatabase** is selected from the DATABASE list and then choose **New Query**.
+2. Ensure **userXX** is selected from the DATABASE list and then choose **New Query**.
 
 3. In the query pane, copy the following statement to create a the NYTaxiRides table, and then choose **Run Query**:
 

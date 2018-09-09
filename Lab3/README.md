@@ -29,7 +29,7 @@ Create an IAM role that has permission to your Amazon S3 sources, targets, tempo
 6. Enter Role name as 
 
 ```
-nycitytaxianalysis-reinv
+userXX-glue-role
 ```
 
 ​	and click Finish.
@@ -44,7 +44,7 @@ nycitytaxianalysis-reinv
 1. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). It will be easier to name your bucket
 
    ```
-   aws-glue-scripts-<YOURAWSACCOUNTID>-us-west-2
+   aws-workshop-macquarie-sydney-userXX
    ```
 
    and it would be easier to choose/select this bucket for the remainder of this Lab3. 
@@ -75,7 +75,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    ii. Click on the **Add Database** button. 
 
-   iii. Enter the Database name as **nycitytaxianalysis-reinv17**. You can skip the description and location fields and click on **Create**. 
+   iii. Enter the Database name as **userXX**. You can skip the description and location fields and click on **Create**. 
 
 3. Click on **Crawlers** under Data Catalog column on the left. 
 
@@ -83,7 +83,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    i. Click on **Add Crawler** button. 
 
-   ii. Under Add information about your crawler, for Crawler name type **nycitytaxianalysis-crawler-reinv17**. You can skip the Description and Classifiers field and click on **Next**. 
+   ii. Under Add information about your crawler, for Crawler name type **userXX-crawler**. You can skip the Description and Classifiers field and click on **Next**. 
 
    iii. Under Data Store, choose S3. And Ensure the radio button for **Crawl Data in Specified path** is checked. 
 
@@ -95,10 +95,10 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    v. For Add Another data store, choose **No** and click on **Next**.
 
-   vi. For Choose an IAM Role, select **Create an IAM role** and enter the role name as following and click on **Next**.
+   vi. For Choose an IAM Role, select **Create an IAM role** and enter the role name created earlier and click on **Next**.
 
    ```
-   nycitytaxianalysis-reinv17-crawler
+   userXX-glue-role
    ```
 
    vii. For Create a schedule for this crawler, choose Frequency as **Run on Demand** and click on **Next**.
@@ -133,7 +133,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
 2. Click on **Jobs** under ETL on the left column and then click on the **Add Job** button. 
 
-3. Under Job properties, input name as **nycitytaxianalysis-reinv17-yellow**. Since we will be working with only the yellow dataset for this workshop.
+3. Under Job properties, input name as **userXX-yellow**. Since we will be working with only the yellow dataset for this workshop.
 
    i. Under  IAM Role, Choose the IAM role created at the beginning of this lab. 
 
@@ -207,7 +207,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
    > Ensure you are in the **US West (Oregon)** region. 
 
-2. Under Database, you should see the database **nycitytaxianalysis-reinv17** which was created during the previous section. 
+2. Under Database, you should see the database **userXX** which was created during the previous section. 
 
 3. Click on **Create Table** right below the drop-down for Database and click on **Automatically (AWS Glue Crawler)**.
 
