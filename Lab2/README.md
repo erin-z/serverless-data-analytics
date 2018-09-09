@@ -59,13 +59,13 @@ v. In the **Review** tab, click on **Create Bucket**
 2. If this is your first time visiting the AWS Management Console for Athena, you will get a Getting Started page. Choose **Get Started** to open the Query Editor. If this isn't your first time, the Athena **Query Editor** opens.
 3. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
 4. In the Athena **Query Editor**, you will see a query pane with an example query. Now you can start entering your query in the query pane.
-5. To create a database named *mydatabase*, copy the following statement, and then choose **Run Query**:
+5. To create a database named *username*, copy the following statement, and then choose **Run Query**:
 
 ````sql
-    CREATE DATABASE mydatabase
+    CREATE DATABASE user1
 ````
 
-6.	Ensure *mydatabase* appears in the DATABASE list on the **Catalog** dashboard
+6.	Ensure *username* appears in the DATABASE list on the **Catalog** dashboard
 
 ![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
 
@@ -73,7 +73,7 @@ v. In the **Review** tab, click on **Create Bucket**
 
 1. Ensure that current AWS region is **US West (Oregon)** region
 
-2. Ensure **mydatabase** is selected from the DATABASE list and then choose **New Query**.
+2. Ensure **username** is selected from the DATABASE list and then choose **New Query**.
 
 3. In the query pane, copy the following statement to create a the NYTaxiRides table, and then choose **Run Query**:
 
@@ -175,7 +175,7 @@ The returned result will contain information for the partitions that are added t
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage11.PNG)
 
-5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
+5. Enter the **Data source** **name** (e.g. *user1*).
 6. Click **Create data source**.
 7. Select the **mydatabase** database.
 
