@@ -28,7 +28,7 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
     CREATE DATABASE user1
 ````
 
-6.	Ensure *user1* appears in the DATABASE list on the **Catalog** dashboard
+6.	Ensure *username* appears in the DATABASE list on the **Catalog** dashboard
 
 ![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
 
