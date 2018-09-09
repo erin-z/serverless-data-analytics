@@ -1,4 +1,4 @@
-# Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
+# Lab 4: (Optional) Analysis of data in Amazon S3 using Amazon Redshift Spectrum
 
 * [Deploying Amazon Redshift Cluster](#deploying-amazon-redshift-cluster)
 * [Running AWS Glue Crawlers](#running-aws-glue-crawlers---csv--parquet-crawler)
