@@ -22,13 +22,13 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 2. If this is your first time visiting the AWS Management Console for Athena, you will get a Getting Started page. Choose **Get Started** to open the Query Editor. If this isn't your first time, the Athena **Query Editor** opens.
 3. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
 4. In the Athena **Query Editor**, you will see a query pane with an example query. Now you can start entering your query in the query pane.
-5. To create a database named *mydatabase*, copy the following statement, and then choose **Run Query**:
+5. To create a database named *username*, copy the following statement, and then choose **Run Query**:
 
 ````sql
-    CREATE DATABASE mydatabase
+    CREATE DATABASE user1
 ````
 
-6.	Ensure *mydatabase* appears in the DATABASE list on the **Catalog** dashboard
+6.	Ensure *user1* appears in the DATABASE list on the **Catalog** dashboard
 
 ![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
 
