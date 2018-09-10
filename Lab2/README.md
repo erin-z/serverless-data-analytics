@@ -10,6 +10,54 @@
 ## Architectural Diagram
 ![architecture-overview-lab2.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/architecture-overview-lab2.png)
 
+## Configuring Amazon QuickSight to use Amazon Athena as data source
+
+> For this lab, you will need to choose the **US West (Oregon)** region. 
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage8.PNG)
+
+1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage9.PNG)
+
+2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
+3. Click on **New data set** on the top-left corner of the webpage and review the options. 
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage10.PNG)
+
+4. Select **Athena** as a Data source.
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage11.PNG)
+
+5. Enter the **Data source** **name** (e.g. *userXX*).
+6. Click **Create data source**.
+7. Select the **userXX** database.
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage12.PNG)
+
+8. Choose the **nytaxirides** table.
+9. Choose **Edit/Preview** data.
+
+> This is a crucial step. Please ensure you choose **Edit/Preview** data.
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage13.PNG)
+
+10. Under **Fields** on the left column, choose **New field**
+
+    i. Select the **extract** operation from Function list.
+
+    ii. Select **pickup_datetime** from the **Field list**.
+
+    iii. For **Calculated field name**, type **hourofday**.
+
+    iv. Type ‘HH’ so the Formula is **extract('HH',{pickup_datetime})**
+
+    v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
+
+
+
+11. Choose **Save and Visualize** on top of the page.
+
 ## Visualizing the data using Amazon QuickSight
 
 Now that you have configured the data source and created a new filed to represent the hour of the day, in this section you will filter the data by year followed by month to visualize the taxi data for the entire month of January 2016 based on the **pickup_datetime** field.
