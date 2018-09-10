@@ -1,6 +1,5 @@
 # Lab 2: Visualization using Amazon QuickSight
 
-* [Signing up for Amazon Quicksight Standard Edition](#signing-up-for-amazon-quicksight-standard-edition)
 * [Configuring Amazon QuickSight to use Amazon Athena as data source](#configuring-amazon-quicksight-to-use-amazon-athena-as-data-source)
 * [Visualizing the data using Amazon QuickSight](#visualizing-the-data-using-amazon-quicksight)
     * [Add year based filter to visualize the dataset for the year 2016](#add-year-based-filter-to-visualize-the-dataset-for-the-year-2016)
@@ -8,110 +7,8 @@
     * [Visualize the data by hour of day for the month of January 2016](#visualize-the-data-by-hour-of-day-for-the-month-of-january-2016)
     * [Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)](#visualize-the-data-for-the-month-of-january-2016-for-all-taxi-typesyellow-green-fhv)
 
-    
-
 ## Architectural Diagram
 ![architecture-overview-lab2.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/architecture-overview-lab2.png)
-
-## Signing up for Amazon Quicksight Standard Edition
-**NOTE:** This only needs to be done once per account then multiple users can console the service. For most workshops the facilitator will already have done this for you so you can skip to the next step - [Configuring Amazon QuickSight to use Amazon Athena as data source](#configuring-amazon-quicksight-to-use-amazon-athena-as-data-source). 
-
-1. Open the [AWS ManagementConsole for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage1.PNG)
-
-2. If this is the first time you are accessing QuickSight, you will see a sign-uplanding page for QuickSight. 
-3. Click on **Sign up for QuickSight**.
-
-> **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage2.PNG)
-
-4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage3.PNG)
-
-5. On the next page,
-
-   i. Enter a unique **QuickSight account name.**
-
-   ii. Enter avalid email for **Notification email address**.
-
-   iii. Just for this step, leave the **QuickSight capacity region **as **N.Virginia**. 
-
-   iv. Ensure that **Enable autodiscovery of your data and users in your Amazon Redshift, Amazon RDS and AWS IAM Services** and **Amazon Athena** boxes are checked. 
-
-   v. **Click Finish**. 
-
-   vi. You will be presented with a with message **Congratulations**! **You are signed up for Amazon QuickSight! **on successful sign up. Click on **Go to Amazon QuickSight**. 
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage4.PNG)
-
-6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage5.PNG)
-
-7. In this section, click on **Account Settings**.
-8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage6.PNG)
-
-9. Check the box for **Amazon S3** and you will see a pop-up to select Amazon S3 buckets.
-10. Ensure **Select All **is checked.
-11. Click on **Select buckets**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage7.PNG)
-
-12. Check the box for **Amazon S3 Storage Analytics**[Optional].
-13. Click **Apply**.
-
-## Configuring Amazon QuickSight to use Amazon Athena as data source
-
-> For this lab, you will need to choose the **US West (Oregon)** region. 
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage8.PNG)
-
-1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage9.PNG)
-
-2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
-3. Click on **New data set** on the top-left corner of the webpage and review the options. 
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage10.PNG)
-
-4. Select **Athena** as a Data source.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage11.PNG)
-
-5. Enter the **Data source** **name** (e.g. *user1*).
-6. Click **Create data source**.
-7. Select the **mydatabase** database.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage12.PNG)
-
-8. Choose the **nytaxirides** table.
-9. Choose **Edit/Preview** data.
-
-> This is a crucial step. Please ensure you choose **Edit/Preview** data.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage13.PNG)
-
-10. Under **Fields** on the left column, choose **New field**
-
-    i. Select the **extract** operation from Function list.
-
-    ii. Select **pickup_datetime** from the **Field list**.
-
-    iii. For **Calculated field name**, type **hourofday**.
-
-    iv. Type ‘HH’ so the Formula is **extract('HH',{pickup_datetime})**
-
-    v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
-
-
-
-11. Choose **Save and Visualize** on top of the page.
 
 ## Visualizing the data using Amazon QuickSight
 

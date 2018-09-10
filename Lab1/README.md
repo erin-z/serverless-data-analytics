@@ -25,7 +25,7 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 5. To create a database named *userXX*, e.g user1, copy the following statement, and then choose **Run Query**:
 
 ````sql
-    CREATE DATABASE user1
+    CREATE DATABASE userXX
 ````
 
 6.	Ensure *userXX* appears in the DATABASE list on the **Catalog** dashboard
